@@ -1,15 +1,14 @@
-//
-//  main.cpp
-//  fbSim
-//
-//  Created by TROY KAZEBEE on 1/22/18.
-//  Copyright © 2018 KrazyTar. All rights reserved.
-//
-
 #include <iostream>
+#include "Game.hpp"
+#include "Team.hpp"
+#include <thread>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main() {
+    srand((int) time(0));
+    // Create test teams and test game
+    Team t1(0, "Vikings");
+    Team t2(1, "Jaguars");
+    Game g(t1, t2);
+    g.sim();
 }
+
